@@ -2,7 +2,7 @@ export class Person {
   constructor(props = {}) {
     this.type = props.type || 'person';
     this._firstName = props.firstName || 'Unknown';
-    this.lastName = props.lastName || 'Unknown';
+    this._lastName = props.lastName || 'Unknown';
     if (!Person.count) {
       Person.count = 0;
     }
@@ -10,11 +10,19 @@ export class Person {
   }
 
   get firstName() {
-    return `!${this._firstName}`;
+    return this._firstName;
   }
 
   set firstName(firstName) {
     this._firstName = firstName;
+  }
+
+  get lastName() {
+    return this._lastName;
+  }
+
+  set lastName(lastName) {
+    this._lastName = lastName;
   }
 
   getInfo() {
@@ -35,7 +43,7 @@ export class Person {
   }
 
   changeLastName(lastName) {
-    this.lastName = lastName;
+    this._lastName = lastName;
     return this;
   }
 }

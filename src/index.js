@@ -11,7 +11,7 @@ console.log(person2.getInfo());
 
 console.log('\n-------Person3-------')
 const person3 = new Employee({firstName: 'Person3'});
-console.log(person3.getInfo());
+ console.log(person3.getInfo());
 
 console.log('\n-------Person4-------')
 const person4 = new Manager({firstName: 'Person4'});
@@ -58,13 +58,13 @@ person1.changeLastName('Statsenko');
 console.log(person1.getInfo());
 
 console.log('\n-------Person2-------')
-person2.changeCourse(4);
-person2.changeBirthday(new Date(1993, 11, 31));
+person2.course = 4;
+person2.birthday = new Date(1993, 11, 31);
 console.log(person2.getInfo());
 
 console.log('\n-------Person3-------')
-person3.changeSalary(15000);
-person3.addSalaryToList();
+person3.salary = 15000;
+person3.addPayout();
 console.log(person3.getInfo());
 
 
