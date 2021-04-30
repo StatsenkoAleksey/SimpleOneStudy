@@ -1,0 +1,29 @@
+{
+  "name": "task9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build",
+    "start": "npm run babel-node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StatsenkoAleksey/SimpleOneStudy.git"
+  },
+  "author": "Aleksey Statsenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StatsenkoAleksey/SimpleOneStudy/issues"
+  },
+  "homepage": "https://github.com/StatsenkoAleksey/SimpleOneStudy#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.14.0"
+  }
+}
